@@ -1,33 +1,185 @@
-<html> 
-  <style>
-    table, th, td {
-  border:1px solid black;
-}
-  </style>
-  <body> 
-    <center>
-      
-    <h1 size="120px"> Gatsby Image Heading </h1> 
-    <p> Explanation under picture 
-    </p> 
-     <p> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Happy Paws</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html {
+      scroll-behavior: smooth;
+    }
+    h1,h2,h3,h4,h5,h6 {font-family: "Roboto"}
+    body {font-family: "Source Sans Pro"}
+    </style>
+  </head>
+<body class="w3-light-white w3-margin">
+
+<!-- Navigation bar with links -->
+<div class="w3-bar w3-white w3-text-black">
+  <h2 class="w3-left w3-tag w3-pale-red w3-round">Gatsby's Parties</h2>
+  <a href="#Contact" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">Gatsby</a>
+  <a href="#Activities" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">Period 5</a>
+  <a href="#Trainers" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">Judah Deuman</a>
+  <a href="#Home" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">Nathaniel Pease</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" style="margin-top:10px;" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="demo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-small">
+  <a href="#Home" class="w3-bar-item w3-button">HOME</a>
+  <a href="#Trainers" class="w3-bar-item w3-button">TRAINERS</a>
+  <a href="#Activities" class="w3-bar-item w3-button">ACTIVITIES</a>
+  <a href="#Contact" class="w3-bar-item w3-button">CONTACT</a>
+</div>
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1600px">
+
+  <!-- Image header -->
+  <header class="w3-display-container w3-wide" style="padding-bottom:32px;" id="Home">
+    <img class="w3-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJsBFAMBIgACEQEDEQH/xAAcAAAABwEBAAAAAAAAAAAAAAABAgMEBQYHAAj/xAA9EAACAQMDAgQEBAQFAgcBAAABAgMABBEFEiEGMRMiQVEHFGFxFTKBoSNCkbEWQ1LB0YLxCCUzNHKy4ST/xAAZAQADAQEBAAAAAAAAAAAAAAAAAgMBBAX/xAAkEQACAgMBAAICAgMAAAAAAAAAAQIRAxIhMSJBE1EEQjJhgf/aAAwDAQACEQMRAD8AyO/1W7u5XcHw19k9qZBpZDtLSsT6ZJqTu7VbOSWOTl1747CkLC4SGcyyJkY9KBmhK3t51JdY3BH0pO58WRskEkfSpz/EMce5Rb8EcHio46gG3EwkBjxQmbSELN/lCJ1yHXkV2p6jcag6NcyFtgwoPpTeRy5J9PaioAx5HFArHFhameTL8Rr3+tWG46oksbA6fYqB5du7/T9qrzXLRpsj4pqSScmgwFmLMWZixPcn1otOLOFJWYOTgDtTmxspLm6NpbIZpG/KAK1KwI7FdTvUdPudPuWgu4vDcDOCcgj6GmtDVAcpIOQcEU9srsRSmSTztjHm9qZV1CbRgrdTNcSlyMew+lJp3NAOTip7p3p59VU3VzMLaxRtpdmwXPsv/OKxv7YyV8Ie2tbi7mEdpBLM/wDpjQsf2qbXovqBovF/DnQezMAf6VqPS0FpZW4XRLB2X+aWTIB+57fvVut5DJgXUEQZvQLuH2yDx/SoPN3iLfiS9Z5vutGv7TK3FuykfTNRxyCQe4rfer9NtfCaR7PwnxkEeYevpx/t6VkGq2cAldMZI5VwPT07U8cliyx14QNdRmUqcH+tBVCQFdQ0eKJ5e2BQAnXChYbWZSM0IxQArBNIoMavgGiyeU7QcjvROxoOT6VoA5rucZxxUl03aQX2rQ21w21X4GexPtU11v0tLoDxSRKfk5fyn/QaKdWZfaKlmjxSbGzRfvTiK3EkO/PvWGiU0niNn2olARg4pZYd0e7NBgkGoakLeGB4gcD9QK6gLDTnx7oiRiWJ3N9TQRxwoSGOMdqI8PhjO7n3oYbcXEqqzYAPJoKln6P6bstWmF1qJxaqfKmcFz9fpT/rufpsp8ppjQvKhAJixhfpTO4sbg2ggtroxqR5tq449qrVxpptCULBsevvSq2Y40IRw25U7iP61P6xoemW/TyXdtL/ABwqtu3ZD57jFVaXKMQMCiFmKbcsVHoTxVU0rEadhT2FdQ4zj3qasNFS50o3JmKsckD0GPelSsCFU47ZH1p9oupy6TqC3cQDFRjB9aYHvzXUKTTD0k9f1mXWbtJpEWNUXaqD0FRlBQ0Ntu2YlR1d3rqDH71hpPaV0+16YGaZERslt5xwOTVg0dILy/jh3IyIcIGOUA+ijvVf6WvfDvJBcTOIkt5GRQ2PNjjmnen362kwmDeHjkFgDlj64+nf9BSZe+FcXPTXE6n0/TnjslmgilQAfxXG7ntn2+gqSl1tkRHfUceINyIAMN6jB9c1QdH6Sv8AULD8TZ3EjEvDbFz29z7k9yT3zRWtdSsrXwrzTysAZmQhT5csW/Yk4+hrmaRemSet9frMr2s0JBGQFfBDHPOPY1RZXgvyxig2g881J32h3V/cl44MM3mAx+9PINBazg2zKA2O1MnFAscmyhX1ngM8IJVe4weKjwpI4FTOsJJazHJO1sjk96hg2MiumLtHPkjUqAoySNH+Wi0FaTBZstk9zXDkgDvRo03LmuB2OCO9AAdjg96c2kscSssg59xU0LS1udL3BQJAvf1zUJ8qFU5PmHoKppXRN0+CSMy3AlhJVlbchHoa3bp6ax646Pe3vdhuAuyTnlXxwax38BvI7cS3ETwbxld4xuFXP4bo+h3MWqPdH5eT/wBaLHBFNGDQspJ9KDqunzaXqE9ldqVlhYqc+o9DQ29jdSWzSxD+H6896234wdNQa1oaazp6q1zbJvJUcyJjtWJQ6hPBB4A7cjJ9KSUaYylshiQQcHvRgW24zxQYJoR7e1IOKxysi7R2rqSFdQA+v+DsAbcO4qW0TRGZFnu5GRCR5e2KsOldPi/vJJWjCKBuzJ6CoTqq6e3laxU7MHnnv7YrPSi4D1Ay2wQWVy/fsGziq41xcOxLuWOcZNKJvmJ3NkAcc0pDdQxZTaDgcU1CtjUw87nIoZZI9m0A5pVLa51GdxaIXAGeBTWaFoWKuCrg4YGsMCA4IPtSi3EqxmNZXCHuoPFJYrhyaDGjqCnFraT3R2wRM5+gpxdaRe2qb54wg+9AEfQ0FDQB33pazhWe4EbthT3NI12cdjg1oD6S2WC6McT9kJyTzU50Vaw3upAzguEwQrHIzmo7pOaNdbiSdVZJ1aI7xnuKsXStlPadRtCuXCPy2MDHvUskuF8Ufs16xuCNu3vwMDjFTcsniQsrRb0PBBxjH61WISseZC4VDzk9qlra7sZwkaX1o8pH5Aylq5I2ds64IfKWlvlkjWMk/mPmP2VR3qrdRNtl7bD7HH71cXSFRJliir+Y/lUD1Jx3+1Z51Bq7XMzR6Tp6+DGT/GlO3d9hW034appelJ6igfETAFsNzx9arl7HJ4zySbcsc8VcZJHusi4jCbTnjtmqZdTNLI+7/Ua6oeHDn9sSVSwyBRQM1LdN6Hd9Q6h8nZg5CFmPsKR1rTJ9Hv3srobZFwfuKrTqznsYgkDiuX8wzQV1YaWCxlRbcqSOR3q2fC/oz/EOupeXQzYWz7mGfzsPSs9tllkyIwSAO9eh/gXp/wAp0ib6Vj4l1M7AN/IoOP3xmuv8i0oi41Ir/wAcbiK2jtNOtEVJCTI7L/KvYCshtrq7AFpHcOkTnBXPArVeuJxr3U09zaRmeONRCgC53Y7kVV+rPh/qejaadZIxDwxTs0YNPNfCL+ycJJto0T4Y6zA+ijSr6fxpYwQPE9VrLOp+nrqbqe+hsrXam/co7DafWmHTOtXOl6rFciXII2Pu/wBNX7qfUfBgGo2aiRnChwO2KlSkuhJuD4ZzpWjifUntbtjGVHNNtWsVsr14I5PEQYKk9/tVi0Xp/Uerb+5nt2CMGxuBxz7U26j6bvNAmje+VtrSbHY+h+9Rfx9LKTfpC2ulzXMZeMDaDjk11a3YdEq1pG6yEB1DYH2oKh+RD9HEPVOkW8ngyBEJGDvHFN7npfpvXraS9W4IuH/zEl5B9Bj2rOptVtpb/cIyLfOBmpm2k028yYX2SAd0Yrms1a6ivBtq3RE1juaO8Eseex4NRUiWdpA0Zj84ODgZq5v0xfy6b4zaw0yD/Lccfoe9V3UJI9PjZZost6soyKaMrG15ZCWOpy2jyFIcq4xg8U3ufEvbiSeUgFjnA9KJcXKysXjXAojSSkcZx9u1OhKVnNb7f5qPbpCrgzcqD2pAsfc5pMknuaBWWRtfgtY1FrFlx+gqO1HXLq/XZIEVfYCoyhxnhQSfpzQFgVxrsHOK40GAr+YZ7Zo0pQny0bwJDF4vhv4ecb9vGfbNI49hQApBI0UySRnDowZT9RW16WbTVdPsNeiQJLMphm2ds/X65FYiP3qy9H9RXemXMdkZN2nXEy+NGw4BPG4e3ep5I2uF8GTWXTStX0e+abxPAe8hwNqK+0L96ivwO9t5Ul+R01HLjYkUhZvvn37VoGi30EqiC8OWXg59RT24l0PSgJhGDIW8oHqa5onXLhXL4axF01LNIojk3BWGckAkDNVOPp15y73FvLdTsCo3Hyj649603VVF1pF9Ef5kDDzZHHPFU2x6kNkUSUJJEFGSo5B9aLodK/Ss6/pjaVo7gLtcJ2NZnjJrT+tdaTUoZmh/IEJP+1ZgveujB2Ls4/5PqSNp/wDDxpcbrq+osuSCsKk/bJ/vVI+L7BuvtRVeybFH9K1j/wAP8Wzo2aTH/qXLn744rGviNcC5611l+P8A3BXj6DFXvhx/2K8kBaPdkfakuR3oyyOq7Q3FF/WlHJHQY5brUbexhUF7iRUGT2J9a9Ix29v0b0L8pcXLYVH3MTyzNkkD+tecemWni1+xltVzKkoYfStA+LWr6hc2+nrNIPBjfJAONz49arDyyOT/ACSJP4Mw3UnUk0U0cktoIzKXbsjdgP3/AGqX+PfUDR2EPT1shMlwBLMw/lQHgfrVn+FUMFn0FaXz8NPGZ5XPf3/tVM61udH6jhfV1dQ7IFi82SR9qpji8suiSaxIyS1tJJlbCZrWfh5pj6to72l3HwFwdw7io7SbKy/C1WNA0m3AAHJNXD4f3C27vaTL4coOQT3xT5UsfESjk3fSrWNtc/D7qxLe4X/yy+YKJCOFb+U/T2q+9d6LBr/StyVQM7xFhgfzCpPq/RbfV9NeO6iEi8H6j61FaLdPa2r2c7NIoG1WIzmvPnOTO2MERnReqSv0zYfMoPGSII+fccV1T2kdPxxWmJI2GXLAA4wDQVB45MraMgtPhlq1+AxeK3U8jILEfenUfwwa2m23V8WXH8vlzSH+PNdQeBlIQO7dyahtR6n1Ody0l5Ix9dvAq63Yalg/Dhpha2l1J2gQgBWfgCiNqPT0UYE4hdhnzd+aqqSXerlYoyXlc583AH1pvf6NNZYBKkHI5HINO0kbunxE3qOs6EVZbeFSx5OEwDUBe6jay25RI8H2x2qPNtJH5uDzST7mOcYooRiLHNEo5U0XBFaKdTqxnW3lLSDuODTWuoAUuJFlnZlHHpSdd9K6tA3zpxdL1n4T2lk9uhTwvDcBcEyA8n759axrXdKi0S/ksZJ2nuYvzgJtC5GR378EVonwvtr/APA7eaLfJbNdN5AuQOf+9Otd0PUdV1ASW/T/AI7lvNNMgQuB7n2qClUnZ0yinBUVg6f0HHZovzlzcXcemeI7LuVZbpiMRj2wM5/70npX+Gjqthb3aRR2O7E1xIr4TCk/fkgD9adaxZ3PTEwg1XQrVUnGV3IMMPUBgasOqXfwyUWPy1k8okRlnFruzGSBgkHv6/0qtkPGSk9xZXMrjSrqKeNOY5IX4KnnjP8Aalbaxd74XeyW5IA8OOVwoXjk+xqFVdCvNRifpxorSBYwSkylGc+rD71YdRuE0ZLJ7nAMhwrhsqy49P61zuHWdcctpIa3unag8U0kPzkCSZ3xG4QKf3/tVVjtfCvTHMVEaLyqPn96u876ZdW5ee5lRSPyo+Af1qnawY5b38P0iMkvwCTux9WPsKmu8LuSSKn1bqcMhaC1QIHP5R6KOP3xVVGBU/1taxWWvG2hJMcdvEA3+oheSfuc1XyCPLjmuuEaR5+SezPUPwgtF0/4e2TZ5cNMw+p5rzZrlx83reoXXfxrmR/6sTXpfR9QttK+G8MxcARWJOPrtry5kuSzHk8n61Vqkc8OsLQZoygFwD2zUrqgtDbRiDb4m4dqVIeyyfDi706zW5lu9vi7uCfQUnaXidVdc2NtfvtsfmeFJ4KioXTrXw4HeQ7Qf3qU6C0P8T1l7jxAkdo4bPu1NbqhGknsbv191BpXSvSU0KFFaSExWtvH6kjHb25rzlo8gMwSVyoUcDPerB8Rbp7zVEt1fxDECCwPApHRdO0wIpun/iHvTRyOHhihuuls6B1qytr/AOXuhujHZj2rX5dN0q8iimTwww5R1IyKxmG20S2UGN88cqPWpq16nS3hWCxtpJXHAHpSzybdNjhSNLuJZLaAqZDNF+4/5prayQNas8G0lW/c1TrDUtdvJQ01uI4PVT3FTEVnIlx4kBdmkGXQe/vU4j9scapreo212YoZLdUAGA3euquTpK9xKb2CRpQ5GceldW/9KV/oadMfCtNZ0/57VtTnVpslI7cKNq+mSR3ptr/wRvIoml0TWDcMP8i6jCk/Zh/xUHqnVHUWjxQ29lqbx2zDK7FGVx6Gn2gfFHqWF/DupYr+MjtIm1h/1CpJSRt2yoJo2r9P3kiX8JjdB5lP396TutYjmlZp2L57ZAOKtHUXVV3c3XjajaBYmHBj839ahF/A7+LyrGkjE+uK2L29KJRj0rF9d7nxE2U+gpn4h9qtXUvS9vp1gtza3LORjcG/mz7VUyrBQSCPY+9UfCNuXgO/1I4H71I35sTZr8sE8XjlRz+tRiqWYKoySeKkrzQr+yslu7hNsbdqDKZHLG8mfCQsR3wM0Q8HBqU0XUo7FZllQkSYOR3+1MblxNcSSKAoZsgD0raFCRoGOWOF9TTy2W3aSNDGAHcKWJzjJxmk41MajAjLMM4LDOPtT7RtNuNV1O3sLcZkuZRGv6//AJz+lYaegdMvLLQrC0sLOPZaRJwyL+c45PHvSF51ykcjLZ28k7DuIxT/AE+60u106GzV/mhGuwHZktjjP7Uy/EdMtS5SzEJJ/wBGM1xN9PTSjVUUzre61rrS1tIk0qWMQzFxuA5yMd6JoPwovLrxJNRcwgwN4QV8kScbc/TvV0PUsaKVitcA8Zx3rrjqa3s9PSeS+aPk+YgAYHf9x+9UUmSnjj9mcdV2OnaTdwfKW13b+DGYrjxGJTxcc7GPek7vqeHWul7jTbq2jW7s18S0nxliix4YE++7B/X6Ul1v1fBrFmthbLvWOfxPFYYyapwkZF3Ru27lSR657irxVrpyzqLpC0Wr6hHthM++MHAVuabXV3d+LIjyvG6kowRiAcHmrr0D8O5upIRqF7M6WmfIsWCzHPqfTt/bmrdrfwosZIJvlYpIp1O9ZWY/xCe4PtzW6pCuTZh80skhVndmIGAWOeKUiUMVLEd+4/tSmsWT6dqVzZTKUkgkKMp9CKbRNg496YU1HqbqyyuuiFsdOnyxVY3iwVZffg/3rLmBH5lI+9KeI+ftR3bxF2t3rZSsWMVEb0IPmBJ7GuZdtAAWIA70oxOaleo9mqRHa3A4p30veXNja3Dwvs3nGfeoOUAIoPepmziiNuieNjjOKYWrJGOK3kBaZg0jHLMTyTUnZ2dgF3SPjH1qFSwHfxOKFGjBKeIOD6mlKItKXWkWw4UM32o8HU1pZ3CvDbA/pVdgt0lPkKk/erBbdKXM2wR4LMM4HelbQyRJNrut6r/7GERRf6qken7fWLW/W4ub/cpwHGOwpSxtbvQ7VY7hQdxwFxzU5c2jf4UlvUQLMY9wJbtWX0GuWPNRtpo7nNrJE6OA2X75rqpUGtNbRLFeI7ygfmB4Irq3aJRY5fsiBZWeo2UbLIpuWHOfSqNqdrcaZqeC+MHjHpWjT6Qu9pirRM3I2nA/Sq/rul297EZQkkcsXlJPOazftMzVeohHuby8EQERdD5fKKWudBS4jd3CpIoyTmjW1wumWpjjky3qzDtScc0l0Hkkl4buc4zTUK3wX0bRIJ2ja9vHmt0PETSbv2qZ1izs5NPkVolSIDykCofR7WKOXxGkKwqckZ70+vNXPgSQW6I0bHuwpJPpbHyJn8kbQyjynAbgmrj1PcQy6HbxTu3irGCoz6iuuNPtdYtlHEE8fI2+tNer4sWdgGUGRVClQfWmfpKuMqR8xzzn60u9lcR2wuWX+GfXFSDaXc2MC3F1CEVuwNPdN1hI7eSGY7lZG2KVzzjimsnr+yDigXu4PP1q9/CS3M/V6iIeeGxuHj/+e3A/+1UqX+HGFON39qsPw215NA6vsr6Y/wAEnwZfs3Gf7VpnC6dN38tja2N0AGkWMRzRv3JHBzn1qySa4mqiVWgSAr6sBUJr2iSaZ1RdWcbj5S6Y3Vs3/wAjlhn75/rTd9CuLxmktziCAbrm4JwkSjufqfpXBq9qPTU1qpBdd1600WBmnHzO4EIqDA3ADBz7VE9YzrN0hBII1VxfBlIOdoZGJFUnXNQbULqUxu3yysRArHkJ6VY+o7nxel4EHY3CEj7Ia6oQpHDly7PhTy2QCe9CrAH9KRPAGKMrVUiad8E+q/wnWfwO6cfJX7ZiLf5c/GP0bGPvivQE0SyJtxw1eM45GjkR0cqynII9D6GvVXQnUsfUnS9nqbMFlVdtwPZ14b/msA82ddhf8aa4EYsq30qg/Zsf7VXhxUlq9yb/AFO9vD3uLiSU/wDWxb/eo9hzzWgDQMaAVx7UAdmlLdgr5NJY+lO00+6MfieC4TvmsBKw0MRu5gg7Cj3qNbHYCRj2p502IVvE+aO2Mthifalur47JLyM2LfnzuRe2PQ0/KE2+VEPHd3GAqStzxUxbaLdIEu5l3xnBdfXFSXS+k29lF+J6lH4iqMhMZ/apPSbibUtRlht4j4MwIVcdq55TOuOJ/ZH31razXtlcaax2uwDRg9jWtafO2mW4laRc+GAFXljVF0bQG0m8nj1NSP5oWIwDmmXU+sXkd34VrJiMLjjvWSV0kYlSdmpHVIJ4AjTbWLDhTkn71PIttc9OGKTCwlNpXOBWBdOX9/ealDDvL72wK2nqF7e10QxRBo32cjBxWO0alskin3OlQtcSFLxQm7yjPYV1QkM3iBm55b3oKn8jqpL7Hc2umRLaGYAIFG1v7Uyu9UCTywjDbx5T6VAaw3/8KTB8hUAzTrR9Ln1KzN8jgiIeauqXpxxf0ROoWcjBysbls5J9KTt0zH4auPL35q3X4lm09ZbRQoPlbjvUNBolwi4FvI3i9iF/NQJXRvMhNkjI2ADzU9pXQOsa5bx3drJAkTDjcxzULFDcKklvNE0RQ9mGDWjfDzXrTTNEnt9QuWRkc+GCe4qTfTp/rwpmu9L650vbC5vPAeHeBujY5H6VC3sStrWm3LMz25Ybgewq8/Ga9a70qwFo7sruGOD3FUFZmjtQsrEpGOciqR6QlaZNdWXkGq6iIlG2KJABgVWtTtrW3WL5cefBOKcPdxsY7lD5GGD+lQ1zcGad3zkE8fQURXRpNNCE779xbvSakbeT34ND75BIpAk5+lOQNr0nV4eruhdMgfUbaHXbG5W3BmlCl4yQC2D3AUhv+mifFvqK00nRrTpDQZVYTIHu5UO4svtkdyx71i3FHhfZIrKTkHg+tKoq7GcnVFktOk9VuI0kkW1tEfkPdXKx8e+O9WvXenrNunLa2t+oNMa4VlZt8gVMgEEBv1Pp6VQoNQVMG4sra6OeWlBzj2pw2sW/hbYtF0+N853gMT27Uwp2q9P32nRLNK1pNE3+ZbXCyD9fX9qhs4/WntzqE867CIo4y24rFGF5pmQDkgetAA5q19FdZT9Mwala+dre9t3UKP5JCMBqqIbBwaMe1AB4hldvuv8AakyNxGO5oYXw3PvRwMSqPrQA3qe6K0uLWuqLCwuYZJreSTEyxNtIQAknPoBUCfzH71KaJrN7ock02myLDNLH4TSbAWC+oGe2awB11po0Og6/cWVtIz2/54d482w9sn1PFOUvrt7SJUI8MRAFcVX7u6uL24ee6laWVz5nc5JqTtJ91rDGP5V5+tZQ0ZVY28cJG4K4JNNd22RX5ODS1/hJfL2puG3DBrRfuzXOnepLG40jwjao2E2sCKStL2OxvUu7CNQ2fy/Ss/6dujDcvDklZBxVjtpWgmHqK55xO7HlVdJ/rrqy4uLKLMSrg+neqhKx1OJJQSp713V9xvihUHg9xTPQ598YhJwPc01UrE3TnRd+hvk4tShmWMCaHvn+9a9caRFr1n5pzGkgx/DAJxWHLINOt5LuCRAyDt71rHw01J7i2hS4fDSW6Mqk96incvkH8hqFJBj8MbP+XUbgD22r/wAV1XouM966urSJz7SPJKzvPoTwMC0gfG3171aOlAbHTpYLh2jRhlgtQNvaTaXdI0ZMtvKcsSKs9ndWgtZFnmCPO2Bn0okx4L9kpoKWgIDy/wAAn1NXmwurISxwDwyUGV4rNI/l/mFQMPBUfmFSi7FRrvxmWKL8oB70rddGUb4gvVRl1rX2iULAkfl8TGSwpnDpCtdRL8ypCHByK631Ga31Rbq4h3RHJC/SoybUP/PluvywOxyBxipO2WVJdJC53y6s9uB4yKuAO4FKajoNpDo1zKZFG1fMp96YaRqTfjk0kADIeM12u6jDci6tW8QyPx5e1Wi/0c7V9ZSrvba6PbwDkzOXJ9lHaorcc8071aQtcsn8sYCAfamAPFUJMUEzIGC48wwc0iTQmimsMAoUOCKLXCgByDkV1Jq1DmtsAc0OeKJXUACRQKfeh9KIeDQAdsA8UpG2XY+wzSGe9Kw8I7H2xWAI0IJoB2rs0ADTq0PlBBORTWnFkc8fWgAb05cZpDOKcXi5IIpBo5FHmjYD3xQBI9OxNNqkYHp3q038sUOVU+aqpoUzQXZZRlscYqQknZ5N0gOTSSKRsT1eUy+GzDcF74popCsDGcfanc8m1eBkH6Ux7vkcVqM8HE88xiZMlh7Gr3Ya/JHFoslqTA6su5w3p6iqRZRiW+gSQ+QsA+PQVd9Xs9N0rUrSGC4SWE4O3P5cUkkgeNy+Vmpat1Nbw3Ea/iCKfCUkZHegqjapplnezpOV7xjse9dS2zqWHhV9JilEO+XJi7BiOM04sTA93Ol5F5FXCACp6KKP/CFj5RyAT9ahL8+HcOycEKMUNmOGtB1tpNpiiAXPm5qZt4X/AAxUaPJUZwfWmJYtcQuT5tg5qWkmk+ZiTcdpj7Us/CkIJSM5m1i+N7LCCSu4jHsParHdacjWFvsOZGGSKrWo+XUZyvB8QirYCRZQOD5tnehukqJR7J2MrVEtGEMfldu59aQfVbbbdW6N/FGQwx3PvRYmLXG4nLbTzUfBFH8zM2wbiBk1WPI2LrtOiqTMWdie5PNJU51ABbuUAYG6m9U+jnfAppSCF7iVIolJdzgUman+j4kbViWXO2IkZ9DnFBhD31m9lcNDL+YDPFNqsnWCr48T482CM1XKABFGBoPShXvQANdXV1aB1A3ehoG71gBaO74QKPaiiin81AHZrqH1oKAOpzZg+Y03Henlj2ag1CpmELqxXOKl4LtrtVSSEeGeOBUBeHDVYemPO0YbkZpZeFMSt0N7a1+U1hgqeTbkCnl5FtMchGNxxirDPbwm9XMa8qc0fqy3ii0S1aOMK27uKlJuzuhjisb4VYxPcXMMECb3dgoHuTU/N8Luqodkr2kJjkPdZeVz7iqz40kTiWNysiEFWHpW72us6jcfD8Xc10zXHg534APb7U/0cL7KiJ0r4edN6DawXWvz+LdP5cSPhQfYAVmfVkelWfUh+Ud5YVkBYE58vtU/1Rqd7f8ASsMt3cPLICPMcZqn9URJHLalFwWQ7jnvWRdlJx1ibd0bY2+u6FDfC2ZImOIuPzKMc/3rqqXROuanadN2tvb3bJEgIVdoOB+orq0xSdH/2Q==" alt="Photo by Jamie Street" width="1600" height="1060">
+    <div class="w3-display-left w3-padding-large">
+      <center><h1 class="w3-text-white">Who is he?</h1></center>
+      <h1 class="w3-jumbo w3-text-white w3-hide-small"><b> </b></h1>
+      <h6 size="0px"><button class="w3-button w3-round w3-pale-red w3-padding-large w3-large w3-hover-opacity-off"><a href="https://www.wsfcs.k12.nc.us/cms/lib/NC01001395/Centricity/Domain/7935/Gatsby_PDF_FullText.pdf">......................</a></button></h6>
+    </div>
+  </header>
+
+  <!-- Grid / Trainers section -->
+  <div class="w3-row-padding" id="Trainers">
+    <div class="w3-center w3-padding-32">
+      <h2 class="w3-wide w3-center">TRAINERS</h2>
+         <p class="w3-opacity w3-center"><i>The caretakers</i></p><br>
+         <p class="w3-white w3-text-black w3-left-align">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra rhoncus suscipit. Integer eget leo pretium, vulputate velit sit amet, aliquam est. Pellentesque a malesuada orci, at rhoncus enim. Suspendisse at dictum arcu. Etiam tempus varius sem, at pretium augue fringilla et. Curabitur tempus sollicitudin congue. Aliquam in malesuada eros. Nunc ullamcorper sagittis augue a ornare. Aenean faucibus finibus sollicitudin. Nullam interdum tellus mauris, et mattis libero accumsan vitae. Suspendisse et dui accumsan, lacinia leo in, aliquam felis. Aliquam tortor tellus, egestas tristique orci at, rutrum lacinia orci.
       </p>
-        <p>
-          </p>
-     
-    <table style="width:75%">
-  <tr>
-    <th>Reviews</th>
-  </tr>
-  <tr>
-    <td>“Theres something funny about a fellow that’ll do a thing like that”  - Page 43
-</td>
-    <td“Gatsby. Somebody told me- Somebody told me that they thought he killed a man once.” - Page 44
-</td>
-    <td>“I heard that from a man who knew all about him and grew up with him in Germany” - Page 44
-</td>
-  </tr>
-    
-      </center>
-  </body> 
+    </div>
+
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://images.unsplash.com/photo-1506993708131-b0bf29d16b76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80" alt="Photo by Sam manns" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Cormick</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-round w3-pale-red w3-block"><a href="#Contact">BOOK NOW</a></button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://images.unsplash.com/photo-1553322378-eb94e5966b0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Photo by Manuel Meza" style="width:100%">
+        <div class="w3-container">
+          <h3>Kristen Arnheim</h3>
+          <p class="w3-opacity">Dog Walker & Trainer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-round w3-pale-red w3-block"><a href="#Contact">BOOK NOW</a></button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card-4">
+        <img src="https://images.unsplash.com/photo-1539440860461-f30442bf7ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" alt="Photo by Wieger Stienstra" style="width:100%">
+        <div class="w3-container">
+          <h3>Ola Truntwistle</h3>
+          <p class="w3-opacity">Dog Trainer & Hairdresser</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          <p><button class="w3-button w3-round w3-pale-red w3-block"><a href="#Contact">BOOK NOW</a></button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Activities section -->
+  <div class="w3-white" id="Activities">
+    <div class="w3-container">
+      <div class="w3-center w3-padding-32">
+      <h2 class="w3-wide">ACTIVITIES</h2>
+      <p class="w3-opacity"><i>Find the right activity for your dog</i></p><br>
+      <p class="w3-left-align w3-white w3-text-black">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra rhoncus suscipit. Integer eget leo pretium, vulputate velit sit amet, aliquam est. Pellentesque a malesuada orci, at rhoncus enim. Suspendisse at dictum arcu. Etiam tempus varius sem, at pretium augue fringilla et. Curabitur tempus sollicitudin congue. Aliquam in malesuada eros. Nunc ullamcorper sagittis augue a ornare. Aenean faucibus finibus sollicitudin. Nullam interdum tellus mauris, et mattis libero accumsan vitae. Suspendisse et dui accumsan, lacinia leo in, aliquam felis. Aliquam tortor tellus, egestas tristique orci at, rutrum lacinia orci.
+      </p>
+      </div>
+
+      <div class="w3-row-padding" style="margin:0 -16px">
+        <div class="w3-third">
+          <img src="https://images.unsplash.com/photo-1611601303737-6496949997cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Photo by Meritt Thomas" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Dog Walking</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-round w3-pale-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">LEARN MORE</button>
+          </div>
+        </div>
+        <div class="w3-third">
+          <img src="https://images.unsplash.com/photo-1542583387-a3955a8b1d2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Photo by Humphrey Muleba" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Dog Training</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-round w3-pale-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">LEARN MORE</button>
+          </div>
+        </div>
+        <div class="w3-third">
+          <img src="https://images.unsplash.com/photo-1628639423534-a0ee52b9db19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Photo by Marcos Ferreira" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Dog Haircut</b></p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-round w3-pale-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Contact -->
+<div class="w3-white" id="Contact">
+  <div class="w3-container w3-padding-32">
+    <div class="w3-center w3-padding-32">
+<h2 class="w3-wide">CONTACT</h2>
+ <p class="w3-opacity"><i>Book now or just send us a message</i></p><br>
+<p class="w3-white w3-text-black w3-left-align">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pharetra rhoncus suscipit. Integer eget leo pretium, vulputate velit sit amet, aliquam est. Pellentesque a malesuada orci, at rhoncus enim. Suspendisse at dictum arcu. Etiam tempus varius sem, at pretium augue fringilla et. Curabitur tempus sollicitudin congue. Aliquam in malesuada eros. Nunc ullamcorper sagittis augue a ornare. Aenean faucibus finibus sollicitudin. Nullam interdum tellus mauris, et mattis libero accumsan vitae. Suspendisse et dui accumsan, lacinia leo in, aliquam felis. Aliquam tortor tellus, egestas tristique orci at, rutrum lacinia orci.
+      </p>
+      </div>
+<form action="/action_page.php" target="_blank">
+<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+<p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="Service" required name="Service"></p>
+<p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+<p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+<p><button class="w3-button w3-round w3-pale-red w3-block" type="submit">SEND MESSAGE</button></p>
+</form>
+</div>
+</div>
+
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+  <footer class="w3-container w3-pale-red w3-center w3-margin-top">
+    <p>Find us on social media.</p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+    <a class="w3-button w3-round-xxlarge w3-small w3-white w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a> <!-- End footer -->
+  </footer>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
 </html>
